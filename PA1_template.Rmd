@@ -5,12 +5,25 @@ output:
     keep_md: true
 ---
 
-
 ## Loading and preprocessing the data
-
-
+```{r}
+data  <- read.csv("activity.csv")
+data1  <- subset(data, !is.na(steps))
+data2  <- data.frame(steps=data1$steps, date=data1$date)
+```
 
 ## What is mean total number of steps taken per day?
+```{r}
+library(reshape2)
+table  <- aggregate(data2$steps, by = list(data2$date), FUN = sum)
+hist(table$x, main = "Histogram Total Steps per Day", xlab = "Total Steps Per Day")
+```
+# Mean
+mean  <- mean(table$x)
+# Median
+median  <- median(table$x)
+
+
 
 
 
