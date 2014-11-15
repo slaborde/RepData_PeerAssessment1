@@ -104,14 +104,9 @@ medianSteps2
   g <- ggplot(table3, aes(interval, x))
   g <- g + geom_line(aes(color = day), size = 1, alpha = 1/2)
   g <- g + ggtitle("Activity patterns between weekdays and weekends")
-  g <- g + ylab("Number of Steps")
+  g <- g + ylab("Number of Steps") + ylim(c(0,250)) + xlim(c(0,2500))
   g <- g + facet_grid(. ~ day)
   g
-
-  #Melt or Dcast first
-  par(mfrow=c(2,1))
-  plot(table3$interval, table3$x, 
-       ylab = "Number of Steps", xlab = "Interval",  type = "l")
 ```
 
 **Differences in activity patterns between weekdays and weekends shows more activity on the intervals from 500 to 1000 during weekdays**
