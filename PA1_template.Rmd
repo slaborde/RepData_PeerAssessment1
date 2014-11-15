@@ -109,5 +109,5 @@ medianSteps2
   g
 ```
 
-**Differences in activity patterns between weekdays and weekends shows more activity on the intervals from 500 to 1000 during weekdays**
+**Differences in activity patterns between weekdays and weekends shows more activity on the intervals from 500 to 1000 during weekdays.**
 
