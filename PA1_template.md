@@ -143,5 +143,14 @@ medianSteps2
 
 ![](./PA1_template_files/figure-html/unnamed-chunk-7-1.png) 
 
+```r
+  #Melt or Dcast first
+  par(mfrow=c(2,1))
+  plot(table3$interval, table3$x, 
+       ylab = "Number of Steps", xlab = "Interval",  type = "l")
+```
+
+![](./PA1_template_files/figure-html/unnamed-chunk-7-2.png) 
+
 **Differences in activity patterns between weekdays and weekends shows more activity on the intervals from 500 to 1000 during weekdays**
 
